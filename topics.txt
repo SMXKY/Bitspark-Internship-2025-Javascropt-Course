@@ -1,0 +1,62 @@
+Final Project: Todo and Notes app
+Lesson 1✅:
+   * variables ✅
+   * let vs const ✅
+   * data types:✅
+      * numbers✅
+      * strings✅
+         * "", '',  ``
+      * boleans✅
+   * Linking HTML and JS files✅
+   * displaying data, and collecting user input, passing variables in strings✅
+   * Arihmetic operations:✅
+      * addition✅
+      * subtraction✅
+      * division✅
+      * multiplication✅
+      * modulus✅
+   * conditionals:
+      * comparism operators✅
+      * logic operators✅
+      * conditions✅
+      * if, if else, if, else if, else✅
+   * loops:✅
+      * while loops✅
+      * for loops✅
+      * commenting ✅
+* Intoduction to Dom Manipulation:
+   * How do select html elements from JavaScript
+   * event listeners
+   * alert in js
+   * modifying an elements contents
+   * classList
+   * forms
+   * Adding and removing elements from dynamically
+   * Project assignment
+
+* Data structures
+   * arrays:
+      * looping through arrays 
+      * for each vs for 
+   * objects
+   * array of objects
+   * redering html from an array of objects
+   * Project assignment
+
+* Advance Event Handling:
+
+* Functions:
+   * arrow functions
+   * normal functions vs arrow functions
+   * project assignment
+
+* Advace JavaScript (Final Project):
+   * OOP
+   * understanding scope
+   * Js modules and importing/exporting code
+   * Asynchronous JavaScript:
+      * explanation
+      * async/await
+      * Fetch API
+
+
