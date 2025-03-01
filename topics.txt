@@ -1,5 +1,4 @@
-Final Project: Todo and Notes app
-Lesson 1✅:
+* Lesson 1✅:
    * variables ✅
    * let vs const ✅
    * data types:✅
@@ -24,17 +23,20 @@ Lesson 1✅:
       * while loops✅
       * for loops✅
       * commenting ✅
-* Intoduction to Dom Manipulation:
-   * How do select html elements from JavaScript
+
+* Lesson 2: Intoduction to Dom Manipulation(Project):
+   * How do select html elements from JavaScript, select one, select all
    * event listeners
    * alert in js
    * modifying an elements contents
    * classList
    * forms
+   * trim
    * Adding and removing elements from dynamically
-   * Project assignment
+   * local storage
+   * Project assignment (color picker app)
 
-* Data structures
+* Lesson 3: Data structures(project: GPA Calculator)
    * arrays:
       * looping through arrays 
       * for each vs for 
@@ -43,14 +45,14 @@ Lesson 1✅:
    * redering html from an array of objects
    * Project assignment
 
-* Advance Event Handling:
+* Lesson 4:
+   * Advance Event Handling:
+   * Functions:
+      * arrow functions
+      * normal functions vs arrow functions
+      * project assignment
 
-* Functions:
-   * arrow functions
-   * normal functions vs arrow functions
-   * project assignment
-
-* Advace JavaScript (Final Project):
+* Leson 5: Advace JavaScript (Final Project: Todo and Notes app):
    * OOP
    * understanding scope
    * Js modules and importing/exporting code
