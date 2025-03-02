@@ -26,6 +26,7 @@
 - Create Courses: ☑️
   - Name☑️
   - Credit value☑️
+- Sort Courses, by name or credit value
 - Edit Course☑️
 - Courses should have perment storage (only the courses)☑️
 - Delete Course☑️

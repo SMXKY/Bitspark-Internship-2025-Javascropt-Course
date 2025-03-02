@@ -4,10 +4,197 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GPA Calculator</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/home-page/app-header.css" />
+    <link rel="stylesheet" href="./styles/home-page/add-course-btn.css" />
+    <link rel="stylesheet" href="./styles/home-page/courses-section.css" />
+    <link
+      rel="shortcut icon"
+      href="./images-and-icons/Favicon/favicon.ico"
+      type="image/x-icon"
+    />
   </head>
   <body>
     <div class="app">
-      <div class="app-header"></div>
+      <div class="app-header section-padding">
+        <a href="/" class="app-logo">
+          <img src="./images-and-icons/Calc Logo.png" alt="logo-img" />
+        </a>
+
+        <p class="logo-text">Calculate Your GPA</p>
+      </div>
+
+      <div class="add-course-section section-padding">
+        <button class="add-course-btn">
+          <img src="./images-and-icons/Add.png" alt="add-course-icon" />
+          <p>Add Course</p>
+        </button>
+      </div>
+
+      <div class="courses section-padding">
+        <p class="course-section-title">Courses</p>
+
+        <form class="courses-table">
+          <div class="course-table-head">
+            <div class="course-table-title-head">
+              <p>Course <span class="hide-course-table-head">Name</span></p>
+              <img src="./images-and-icons/sort.png" alt="sort-icon" />
+            </div>
+
+            <div class="course-table-title-head">
+              <p>
+                <span class="hide-course-table-head">Credit Value</span>
+                <span class="cv-hide">CV</span>
+              </p>
+              <img src="./images-and-icons/sort.png" alt="sort-icon" />
+            </div>
+
+            <div class="course-table-title-head">
+              <p>Mark</p>
+            </div>
+          </div>
+
+          <div class="course-table-entries">
+            <div class="course-table-entry course-table-gray">
+              <p>Object Modeling</p>
+
+              <div class="table-course-cv-holder">
+                <p>3</p>
+              </div>
+
+              <div class="table-course-options">
+                <input type="number" placeholder="enter mark" />
+                <button class="option-btn">
+                  <img
+                    src="./images-and-icons/Edit.png"
+                    alt="edit-icon"
+                    class="options-btn"
+                  />
+                </button>
+
+                <button class="option-btn">
+                  <img
+                    src="./images-and-icons/Trash.png"
+                    alt="delete-icon"
+                    class="options-btn"
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="course-table-entry course-table-white">
+              <p>Object Modeling</p>
+
+              <div class="table-course-cv-holder">
+                <p>3</p>
+              </div>
+
+              <div class="table-course-options">
+                <input type="number" placeholder="enter mark" />
+                <button class="option-btn">
+                  <img
+                    src="./images-and-icons/Edit.png"
+                    alt="edit-icon"
+                    class="options-btn"
+                  />
+                </button>
+
+                <button class="option-btn">
+                  <img
+                    src="./images-and-icons/Trash.png"
+                    alt="delete-icon"
+                    class="options-btn"
+                  />
+                </button>
+              </div>
+            </div>
+
+            <div class="course-table-entry course-table-gray">
+              <p>Object Modeling</p>
+
+              <div class="table-course-cv-holder">
+                <p>3</p>
+              </div>
+
+              <div class="table-course-options">
+                <input type="number" placeholder="enter mark" />
+                <button class="option-btn">
+                  <img
+                    src="./images-and-icons/Edit.png"
+                    alt="edit-icon"
+                    class="options-btn"
+                  />
+                </button>
+
+                <button class="option-btn">
+                  <img
+                    src="./images-and-icons/Trash.png"
+                    alt="delete-icon"
+                    class="options-btn"
+                  />
+                </button>
+              </div>
+            </div>
+
+            <div class="course-table-entry course-table-white">
+              <p>Object Modeling</p>
+
+              <div class="table-course-cv-holder">
+                <p>3</p>
+              </div>
+
+              <div class="table-course-options">
+                <input type="number" placeholder="enter mark" />
+                <button class="option-btn">
+                  <img
+                    src="./images-and-icons/Edit.png"
+                    alt="edit-icon"
+                    class="options-btn"
+                  />
+                </button>
+
+                <button class="option-btn">
+                  <img
+                    src="./images-and-icons/Trash.png"
+                    alt="delete-icon"
+                    class="options-btn"
+                  />
+                </button>
+              </div>
+            </div>
+
+            <div class="course-table-entry course-table-gray">
+              <p>Object Modeling</p>
+
+              <div class="table-course-cv-holder">
+                <p>3</p>
+              </div>
+
+              <div class="table-course-options">
+                <input type="number" placeholder="enter mark" />
+                <button class="option-btn">
+                  <img
+                    src="./images-and-icons/Edit.png"
+                    alt="edit-icon"
+                    class="options-btn"
+                  />
+                </button>
+
+                <button class="option-btn">
+                  <img
+                    src="./images-and-icons/Trash.png"
+                    alt="delete-icon"
+                    class="options-btn"
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="submit-btn-holder form-not-filled-btn">
+            <button>Calculate GPA</button>
+          </div>
+        </form>
+      </div>
     </div>
   </body>
 </html>

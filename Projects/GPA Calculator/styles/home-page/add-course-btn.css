@@ -1,0 +1,57 @@
+.add-course-section {
+  display: flex;
+  justify-content: left;
+  width: 100%;
+  margin-top: var(--section-spacing);
+  /* background-color: blue; */
+}
+
+.add-course-btn {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  border: none;
+  cursor: pointer;
+  padding: 0.8rem 0.8rem;
+  border-radius: var(--btn-border-raduis);
+  width: 100%;
+  background-color: white;
+  transition: 0.2s;
+}
+
+.add-course-btn:hover {
+  background-color: var(--no-background-btn-hover-color);
+}
+
+.add-course-btn img {
+  object-fit: cover;
+  height: 1.5rem;
+  width: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.add-course-btn p {
+  color: var(--sub-text-color);
+  font-weight: 500;
+  font-size: 1rem;
+  transition: 0.2s;
+}
+
+.add-course-btn:hover p {
+  color: var(--cta-color);
+}
+
+@media (max-width: 800px) {
+  .add-course-section {
+    margin-top: var(--mobile-section-spacing);
+  }
+
+  .add-course-btn img {
+    height: 1.2rem;
+    width: 1.2rem;
+  }
+
+  .add-course-btn p {
+    font-size: 0.8rem;
+  }
+}
