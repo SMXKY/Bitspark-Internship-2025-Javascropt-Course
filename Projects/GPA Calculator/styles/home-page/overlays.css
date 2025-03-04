@@ -1,0 +1,121 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+  opacity: 1;
+  visibility: visible;
+  transition: ease-in-out 0.6s;
+}
+
+.overlay-form {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem 1rem;
+  transition: ease-in-out 0.3s;
+  transform: scale(1);
+  opacity: 1;
+}
+
+.overlay-form-text-input {
+  display: block;
+  margin-bottom: 0.5rem;
+  border: none;
+  background: none;
+  border-bottom: solid 1px var(--form-input-border-color);
+  padding: 0.1rem 0.5rem;
+  width: 35rem;
+  margin-top: 0rem;
+}
+
+.overlay-form-text-input:focus {
+  outline: none;
+}
+
+.overlay-form-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.overlay-form-buttons button {
+  border: none;
+  padding: 0.5rem 4rem;
+  border-radius: var(--btn-border-raduis);
+  transition: 0.2s;
+}
+
+.close-overlay-form-btn:hover,
+.create-course-overlay-form-btn:hover {
+  opacity: 0.7;
+}
+
+.close-overlay-form-btn,
+.create-course-overlay-form-btn {
+  background-color: var(--table-gray);
+  color: var(--cta-color);
+  cursor: pointer;
+}
+
+.create-course-overlay-form-btn:hover {
+  opacity: 1;
+}
+
+.create-course-overlay-form-btn {
+  cursor: not-allowed;
+}
+
+.create-course-overlay-form-btn-active {
+  background-color: var(--cta-color);
+  color: white;
+}
+
+.hide-overlay {
+  opacity: 0;
+  visibility: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hide-overlay .overlay-form {
+  transform: scale(0.5);
+  opacity: 0;
+}
+
+@media (max-width: 631px) {
+  .overlay-form-text-input {
+    width: 100%;
+  }
+
+  .overlay-form {
+    width: 100%;
+  }
+
+  .overlay {
+    padding: 0rem 2rem;
+  }
+
+  .overlay-form-buttons button {
+    padding: 0.5rem 3rem;
+  }
+}
+
+@media (max-width: 395px) {
+  .overlay-form-text-input,
+  .overlay-form-buttons button {
+    font-size: 0.8rem;
+  }
+
+  .overlay-form-buttons button {
+    padding: 0.4rem 2rem;
+    border-radius: 4px;
+  }
+}

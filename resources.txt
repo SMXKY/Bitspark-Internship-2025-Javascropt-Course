@@ -1,0 +1,2 @@
+* All css files, and html files
+* Main in js files and script folder

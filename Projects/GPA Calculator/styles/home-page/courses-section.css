@@ -167,6 +167,10 @@
   opacity: 1;
 }
 
+.no-courses-yet {
+  color: var(--sub-text-color);
+}
+
 @media (max-width: 1630px) {
   .courses {
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0);
@@ -222,6 +226,10 @@
     height: 1rem;
     width: 1rem;
   }
+
+  .no-courses-yet {
+    font-size: 0.8rem;
+  }
 }
 
 @media (max-width: 596px) {
@@ -244,6 +252,10 @@
   }
 
   .course-table-entry {
+    font-size: 0.7rem;
+  }
+
+  .no-courses-yet {
     font-size: 0.7rem;
   }
 

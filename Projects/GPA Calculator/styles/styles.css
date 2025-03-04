@@ -30,6 +30,7 @@ body {
   --cta-color: rgba(52, 210, 44, 1);
   --table-gray: rgb(242, 242, 242);
   --no-background-btn-hover-color: rgb(240, 240, 240);
+  --form-input-border-color: rgba(238, 238, 238, 1);
 }
 
 @media (max-width: 1629px) {

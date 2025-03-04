@@ -2,5 +2,6 @@
 
 const myName = "John Minang";
 const email = "johnminang@gmail.com";
+const age = 88;
 const level = 4;
 const isCameroonian = true;

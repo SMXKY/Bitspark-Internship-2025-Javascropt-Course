@@ -1,4 +1,4 @@
-# Introduction to JavaScript
+# Lesson 1: Introduction to JavaScript
 
 > Todo: Create a Javascript File to Work with
 

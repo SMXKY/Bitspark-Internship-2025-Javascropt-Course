@@ -23,6 +23,7 @@
 
 ## Requirements for the GPA Calculator
 
+- have mini landing page/dashboard ✅
 - Create Courses: ☑️
   - Name☑️
   - Credit value☑️

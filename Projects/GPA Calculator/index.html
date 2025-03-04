@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./styles/home-page/app-header.css" />
     <link rel="stylesheet" href="./styles/home-page/add-course-btn.css" />
     <link rel="stylesheet" href="./styles/home-page/courses-section.css" />
+    <link rel="stylesheet" href="./styles/home-page/overlays.css" />
     <link
       rel="shortcut icon"
       href="./images-and-icons/Favicon/favicon.ico"
@@ -25,7 +26,7 @@
       </div>
 
       <div class="add-course-section section-padding">
-        <button class="add-course-btn">
+        <button class="add-course-btn js-add-course-btn">
           <img src="./images-and-icons/Add.png" alt="add-course-icon" />
           <p>Add Course</p>
         </button>
@@ -55,7 +56,7 @@
           </div>
 
           <div class="course-table-entries">
-            <div class="course-table-entry course-table-gray">
+            <!-- <div class="course-table-entry course-table-gray">
               <p>Object Modeling</p>
 
               <div class="table-course-cv-holder">
@@ -187,7 +188,9 @@
                   />
                 </button>
               </div>
-            </div>
+            </div> -->
+
+            <p class="no-courses-yet">No courses created yet...</p>
           </div>
 
           <div class="submit-btn-holder form-not-filled-btn">
@@ -196,5 +199,31 @@
         </form>
       </div>
     </div>
+
+    <div class="overlay hide-overlay js-pop-up-overlay">
+      <form action="" class="overlay-form">
+        <input
+          type="text"
+          placeholder="Course Name"
+          class="overlay-form-text-input"
+        />
+        <input
+          type="number"
+          name=""
+          id=""
+          placeholder="Credit Value"
+          class="overlay-form-text-input"
+        />
+
+        <div class="overlay-form-buttons">
+          <button class="close-overlay-form-btn js-close-overlay-btn">
+            Close
+          </button>
+          <button class="create-course-overlay-form-btn">Create</button>
+        </div>
+      </form>
+    </div>
+
+    <script type="module" src="./scripts/main.js"></script>
   </body>
 </html>
