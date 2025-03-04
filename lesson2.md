@@ -105,7 +105,7 @@ For example:
 > - The data elements in an array can be strings, numbers, booleans, or even objects.
 > - While arrays can contain a mixture of data types, a good practice is to create arrays with data elements of the same type.
 
-#### Accessing Values in Arrays
+### Accessing Values in Arrays
 
 Every element in an array is stored in a specific position. These positions are labeled with numerical values starting from `0`. For example, in our numbers array, the elements are positioned as shown below:
 
@@ -151,7 +151,7 @@ console.log(numbers);
 
 A class is a blueprint for an object. For now, think of it as code that defines the key-value pairs an object will have.
 
-#### Creating a Class
+### Creating a Class
 
 1. **Use the `class` Keyword:**  
    Define a class with the `class` keyword followed by the class name.
@@ -171,7 +171,7 @@ class Student {
 }
 ```
 
-##### Explanation of the Code
+#### Explanation of the Code
 
 Imagine you’re making a blueprint for a student. This blueprint tells us what details every student should have (like a name and an age).
 
