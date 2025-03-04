@@ -752,7 +752,6 @@ Let us continue working in our `main.js` file.
    ```js
    addCourseBtn.addEventListener("click", () => {
      popUpOverlay.classList.remove("hide-overlay");
-     console.log(addCourseBtn, popUpOverlay);
    });
    ```
 

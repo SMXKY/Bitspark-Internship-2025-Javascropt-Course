@@ -32,7 +32,6 @@ const closeOverlayBtn = document.querySelector(".js-close-overlay-btn");
 
 addCourseBtn.addEventListener("click", () => {
   popUpOverlay.classList.remove("hide-overlay");
-  console.log(addCourseBtn, popUpOverlay);
 });
 
 closeOverlayBtn.addEventListener("click", (e) => {
