@@ -76,6 +76,7 @@
 .create-course-overlay-form-btn-active {
   background-color: var(--cta-color);
   color: white;
+  cursor: pointer;
 }
 
 .hide-overlay {

@@ -40,9 +40,7 @@ In many object-oriented languages, objects are instances of classes. In JavaScri
 }
 ```
 
-> **Note:**  
-> We will discuss classes later in the course.
-
+> **Note:** We will discuss classes later in the course.
 > **Explanation:**
 >
 > 1. **Creating an Object:**  

@@ -28,17 +28,17 @@
    * How do select html elements from JavaScript, select one✅
    * event listeners✅
    * modifying an elements contents✅
-   * rendering html
-   * classList
-   * forms
-   * trim
-   * to upper and to lowwer
-   * form validation
-   * alert in js
-   * redering html from an array of objects
-   * select all
+   * rendering html✅
+   * classList✅
+   * forms ✅
+   * collecting input data✅
+   * trim✅
+   * form validation✅
+   * alert in js✅
    * looping through arrays 
    * for each vs for 
+   * redering html from an array of objects
+   * select all
    * local storage
    * Adding and removing elements from dynamically
    * Project assignment (color picker app)
@@ -66,4 +66,3 @@
       * Fetch API
 
 
-- take the class in the add course btn 
