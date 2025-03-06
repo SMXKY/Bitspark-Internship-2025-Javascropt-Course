@@ -35,7 +35,7 @@
       <div class="courses section-padding">
         <p class="course-section-title">Courses</p>
 
-        <form class="courses-table">
+        <form class="courses-table js-course-table-form">
           <div class="course-table-head">
             <div class="course-table-title-head">
               <p>Course <span class="hide-course-table-head">Name</span></p>
@@ -55,7 +55,7 @@
             </div>
           </div>
 
-          <div class="course-table-entries">
+          <div class="course-table-entries js-courses-table">
             <!-- <div class="course-table-entry course-table-gray">
               <p>Object Modeling</p>
 
@@ -200,8 +200,9 @@
       </div>
     </div>
 
+    <!-- create course form -->
     <div class="overlay hide-overlay js-pop-up-overlay">
-      <form action="" class="overlay-form">
+      <form action="" class="overlay-form js-course-form">
         <input
           type="text"
           placeholder="Course Name"
@@ -223,6 +224,56 @@
             class="create-course-overlay-form-btn create-course-overlay-form-btn-active js-create-course-btn"
           >
             Create
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- edit course form -->
+    <div class="overlay hide-overlay js-pop-up-overlay-edit-course">
+      <form action="" class="overlay-form js-course-form">
+        <input
+          type="text"
+          placeholder="Course Name"
+          class="overlay-form-text-input js-edit-course-name-input"
+        />
+        <input
+          type="number"
+          name=""
+          id=""
+          placeholder="Credit Value"
+          class="overlay-form-text-input js-edit-course-credit-value-input"
+        />
+
+        <div class="overlay-form-buttons">
+          <button
+            class="close-overlay-form-btn js-close-edit-course-overlay-btn"
+          >
+            Close
+          </button>
+          <button
+            class="create-course-overlay-form-btn create-course-overlay-form-btn-active js-edit-course-form-submit-btn"
+          >
+            Edit
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Delete Course Form -->
+    <div class="overlay hide-overlay js-pop-up-overlay-delete-course">
+      <form action="" class="overlay-form js-course-form">
+        <p class="delete-course-prompt">
+          Are You Sure You Want to Delete This Course?
+        </p>
+        <div class="overlay-form-buttons">
+          <button class="close-overlay-form-btn js-close-delete-course-form">
+            No
+          </button>
+          <button
+            class="create-course-overlay-form-btn create-course-overlay-form-btn-active delete-course-btn js-delete-course-form-btn"
+          >
+            Yes
           </button>
         </div>
       </form>

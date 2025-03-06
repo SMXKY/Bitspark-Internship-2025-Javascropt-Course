@@ -31,6 +31,7 @@ body {
   --table-gray: rgb(242, 242, 242);
   --no-background-btn-hover-color: rgb(240, 240, 240);
   --form-input-border-color: rgba(238, 238, 238, 1);
+  --delete-erorr-red-color: rgba(209, 69, 59, 1);
 }
 
 @media (max-width: 1629px) {

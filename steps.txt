@@ -1,0 +1,14 @@
+-> Generation the courses html
+    -> explain the data custom attribute
+-> rendring the courses html
+-> handling keydown events, after refactoring the handle submision code
+
+//Permenently storing our courses when we create them
+//Alerting the user that the course has been successfully created
+
+//Editing Courses:
+    -> Selecting all elements with the same class
+
+//Deleting Courses:
+    -> How to delete an element from an array
+//Submiting all marks for calculations
