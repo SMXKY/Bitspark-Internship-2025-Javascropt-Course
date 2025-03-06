@@ -68,7 +68,7 @@ const createCourseFormValidation = (courseName, courseCreditValue) => {
   }
   if (createCourseErrors.length > 0) {
     //sending a message to the user with the error
-    alert(createCourseErrors[0]);
+    alertMessage(createCourseErrors[0], "error");
 
     //assigning an emptyy array back to the create course errors array
     createCourseErrors = [];
@@ -99,10 +99,14 @@ const handleCreateCourse = (e) => {
   //Permenently storing our courses when we create them
   localStorage.setItem("courses", JSON.stringify(courses));
 
-  //Alerting the user that the course has been successfully created
-  alert("Course Was Successfully created");
+  //alertMessageing the user that the course has been successfully created
+  alertMessage("Course Was Successfully created", "success");
 
   renderCoursesTable();
+
+  document
+    .querySelector(".js-calculate-gpa-btn-holder")
+    .classList.add("form-not-filled-btn");
 };
 
 createCourseBtn.addEventListener("click", (e) => {
@@ -140,7 +144,7 @@ function generateCourseHtml(courses) {
               </div>
 
               <div class="table-course-options">
-                <input type="number" placeholder="enter mark" class="js-course-mark-input" data-courseId=${course.id}/>
+                <input type="number" placeholder="enter mark" class="js-course-mark-input" data-courseId=${course.id} value="${course.mark}"/>
                 <button  type="button" class="option-btn js-edit-course-btn" data-courseId=${course.id}>
                   <img
                     src="./images-and-icons/Edit.png"
@@ -169,7 +173,7 @@ function generateCourseHtml(courses) {
               </div>
 
               <div class="table-course-options">
-                <input type="number" placeholder="enter mark" class="js-course-mark-input" data-courseId=${course.id}/>
+                <input type="number" placeholder="enter mark" class="js-course-mark-input" data-courseId=${course.id} value="${course.mark}"/>
                 <button  type="button" class="option-btn js-edit-course-btn" data-courseId=${course.id}>
                   <img
                     src="./images-and-icons/Edit.png"
@@ -262,7 +266,7 @@ function renderCoursesTable() {
 
     if (createCourseErrors.length > 0) {
       //sending a message to the user with the error
-      alert(createCourseErrors[0]);
+      alertMessage(createCourseErrors[0], "error");
 
       //assigning an emptyy array back to the create course errors array
       createCourseErrors = [];
@@ -300,25 +304,25 @@ function renderCoursesTable() {
     //Permenently storing our courses when we create them
     localStorage.setItem("courses", JSON.stringify(courses));
 
-    //Alerting the user that the course has been successfully edited
+    //alertMessageing the user that the course has been successfully edited
   };
 
   editCourseBtn.addEventListener("click", (e) => {
     handleCourseEdit(e);
-    alert("Course Was Successfully Edited");
+    alertMessage("Course Was Successfully Edited", "success");
   });
 
   editCourseNameInput.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
       handleCourseEdit(e);
-      alert("Course Was Successfully Edited");
+      alertMessage("Course Was Successfully Edited", "success");
     }
   });
 
   editCourseCreditValueInput.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
       handleCourseEdit(e);
-      alert("Course Was Successfully Edited");
+      alertMessage("Course Was Successfully Edited", "success");
     }
   });
 
@@ -369,11 +373,14 @@ function renderCoursesTable() {
     //Permenently storing our courses when we create them
     localStorage.setItem("courses", JSON.stringify(courses));
 
-    //Alerting the user that the course has been successfully deleted
-    alert(`Course: ${courseName} Was Successfully Deleted`);
+    //alertMessageing the user that the course has been successfully deleted
+    alertMessage(`Course: ${courseName} Was Successfully Deleted`, "success");
   });
 
   //submitng marks
+
+  //Doing validation for inputing marks
+  let allMarksAvailable = false;
 
   document.querySelectorAll(".js-course-mark-input").forEach((input) => {
     input.addEventListener("keydown", (e) => {
@@ -387,13 +394,123 @@ function renderCoursesTable() {
       const mark = Number(input.value);
 
       if (mark < 0 || mark > 100) {
-        alert("course mark cannot be less 0 or greater than 100");
-        input.value = 0;
+        alertMessage(
+          "course mark cannot be less 0 or greater than 100",
+          "error"
+        );
+        input.value = "00";
       }
 
-      let allMarksAvailable = false;
+      document.querySelectorAll(".js-course-mark-input").forEach((inputs) => {
+        if (!inputs.value || inputs.value === "00") {
+          allMarksAvailable = false;
+        } else {
+          allMarksAvailable = true;
+        }
+      });
+
+      if (allMarksAvailable) {
+        document
+          .querySelector(".js-calculate-gpa-btn-holder")
+          .classList.remove("form-not-filled-btn");
+      } else {
+        document
+          .querySelector(".js-calculate-gpa-btn-holder")
+          .classList.add("form-not-filled-btn");
+      }
     });
+  });
+
+  // Storing the marks in our course objects
+  const calculateGPABtn = document.querySelector(".js-calculate-gpa-btn");
+
+  calculateGPABtn.addEventListener("click", () => {
+    if (!allMarksAvailable) {
+      alertMessage(
+        "Please fill in marks for every course before you can callculate your GPA.",
+        "error"
+      );
+
+      return;
+    }
+
+    document.querySelectorAll(".js-course-mark-input").forEach((input) => {
+      const inputId = Number(input.dataset.courseid);
+      courses.forEach((course) => {
+        if (course.id === inputId) {
+          course.mark = Number(input.value);
+        }
+      });
+    });
+
+    localStorage.setItem("courses", JSON.stringify(courses));
   });
 }
 
+//Reseting marks back to 0
+
+document.querySelector(".js-reset-marks-btn").addEventListener("click", (e) => {
+  courses.forEach((course) => {
+    course.mark = "";
+  });
+
+  localStorage.setItem("courses", JSON.stringify(courses));
+  renderCoursesTable();
+  document
+    .querySelector(".js-calculate-gpa-btn-holder")
+    .classList.add("form-not-filled-btn");
+
+  alertMessage("Marks successfully reseted to 0", "success");
+});
+
 renderCoursesTable();
+
+//custom alert
+const alertHolder = document.querySelector(".js-alert-holder");
+const alertIconHolder = document.querySelector(".js-alert-icon-holder");
+const alertImage = document.querySelector(".js-alert-img");
+const alertMessageText = document.querySelector(".js-alert-message");
+const closeAlertBtn = document.querySelector(".js-close-alert-btn");
+const closeAlertBtnIcon = document.querySelector(".js-close-alert-btn-icon");
+
+const fullAlertHolder = document.querySelector(".js-full-alert-holder");
+let alertTimeoutId;
+
+function alertMessage(message, type) {
+  const closeImg = `./images-and-icons/Close-${type}.png`;
+
+  const specifics = {
+    img: "",
+    holderClass: "",
+    iconHolcderClass: "",
+    closeButtonClass: "",
+  };
+
+  if (type === "error") {
+    specifics.img = `./images-and-icons/error-icon.png`;
+  } else if (type === "success") {
+    specifics.img = `./images-and-icons/success-icon.png`;
+  }
+
+  specifics.holderClass = `${type}-holder`;
+  specifics.iconHolcderClass = `${type}-icon-holder`;
+  specifics.closeButtonClass = `${type}-close-btn`;
+
+  alertHolder.classList.add(specifics.holderClass);
+  alertIconHolder.classList.add(specifics.iconHolcderClass);
+  alertImage.src = specifics.img;
+  alertMessageText.innerHTML = message;
+  closeAlertBtn.classList.add(specifics.closeButtonClass);
+  closeAlertBtnIcon.src = closeImg;
+  fullAlertHolder.classList.add("show-alert");
+
+  alertTimeoutId = setTimeout(() => {
+    fullAlertHolder.classList.remove("show-alert");
+    clearTimeout(alertTimeoutId);
+  }, 4000);
+}
+
+closeAlertBtn.addEventListener("click", () => {
+  fullAlertHolder.classList.remove("show-alert");
+  clearTimeout(alertTimeoutId);
+});

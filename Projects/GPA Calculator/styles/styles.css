@@ -26,7 +26,7 @@ body {
   --sub-text-color: rgba(128, 128, 128, 1);
   --section-spacing: 1.5rem;
   --mobile-section-spacing: 1rem;
-  --btn-border-raduis: 8px;
+  --btn-border-raduis: 6px;
   --cta-color: rgba(52, 210, 44, 1);
   --table-gray: rgb(242, 242, 242);
   --no-background-btn-hover-color: rgb(240, 240, 240);

@@ -135,15 +135,15 @@
 
 .submit-btn-holder {
   display: flex;
-  justify-content: right;
+  justify-content: space-between;
   margin-top: 2rem;
 }
 
-.submit-btn-holder button {
+.submit-btn {
   border: none;
   background-color: var(--cta-color);
   border-radius: var(--btn-border-raduis);
-  padding: 0.5rem 5rem;
+  padding: 0.5rem 4rem;
   cursor: pointer;
   color: white;
   font-weight: 400;
@@ -152,18 +152,18 @@
   transition: 0.4s;
 }
 
-.submit-btn-holder button:hover {
+.submit-btn:hover {
   opacity: 0.6;
 }
 
-.form-not-filled-btn button {
+.form-not-filled-btn .calculate-gpa-btn {
   background-color: var(--table-gray);
   cursor: not-allowed;
   border-color: var(--table-gray);
   color: var(--cta-color);
 }
 
-.form-not-filled-btn button:hover {
+.form-not-filled-btn .calculate-gpa-btn:hover {
   opacity: 1;
 }
 
@@ -290,9 +290,9 @@
     font-size: 0.55rem;
   }
 
-  .submit-btn-holder button {
+  .submit-btn {
     font-size: 0.8rem;
-    padding: 0.5rem 2.3rem;
+    padding: 0.5rem 2rem;
     border-radius: 6px;
   }
 
@@ -307,9 +307,9 @@
     grid-template-columns: 1fr 3rem 1fr;
   }
 
-  .submit-btn-holder button {
+  .submit-btn {
     font-size: 0.7rem;
-    padding: 0.4rem 2rem;
+    padding: 0.4rem 1.8rem;
   }
 }
 

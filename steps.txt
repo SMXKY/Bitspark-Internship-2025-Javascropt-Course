@@ -12,3 +12,7 @@
 //Deleting Courses:
     -> How to delete an element from an array
 //Submiting all marks for calculations
+ -> validation before Submiting
+ -> reseting marks
+//Custom alerts
+ -> set time out

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./styles/home-page/add-course-btn.css" />
     <link rel="stylesheet" href="./styles/home-page/courses-section.css" />
     <link rel="stylesheet" href="./styles/home-page/overlays.css" />
+    <link rel="stylesheet" href="./styles/alert.css" />
     <link
       rel="shortcut icon"
       href="./images-and-icons/Favicon/favicon.ico"
@@ -193,8 +194,22 @@
             <p class="no-courses-yet">No courses created yet...</p>
           </div>
 
-          <div class="submit-btn-holder form-not-filled-btn">
-            <button>Calculate GPA</button>
+          <div
+            class="submit-btn-holder form-not-filled-btn js-calculate-gpa-btn-holder"
+          >
+            <button
+              class="js-reset-marks-btn submit-btn rest-btn"
+              type="button"
+            >
+              Reset Marks
+            </button>
+
+            <button
+              class="js-calculate-gpa-btn submit-btn calculate-gpa-btn"
+              type="button"
+            >
+              Calculate GPA
+            </button>
           </div>
         </form>
       </div>
@@ -277,6 +292,30 @@
           </button>
         </div>
       </form>
+    </div>
+
+    <div class="alert-holder js-full-alert-holder">
+      <div class="alert js-alert-holder">
+        <div class="alert-information">
+          <div class="alert-image js-alert-icon-holder">
+            <img
+              src="./images-and-icons/success-icon.png"
+              alt="alert-icon"
+              class="js-alert-img"
+            />
+          </div>
+
+          <p class="alert-text js-alert-message">Default Message</p>
+        </div>
+
+        <button class="close-alert-button js-close-alert-btn">
+          <img
+            src="./images-and-icons/Close-alert.png"
+            alt="close-icon"
+            class="js-close-alert-btn-icon"
+          />
+        </button>
+      </div>
     </div>
 
     <script type="module" src="./scripts/main.js"></script>
