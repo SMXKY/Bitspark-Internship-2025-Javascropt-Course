@@ -12,6 +12,7 @@ body {
   /* justify-content: center; */
   align-items: center;
   padding-top: 4rem;
+  padding-bottom: 4rem;
   flex-direction: column;
 }
 
