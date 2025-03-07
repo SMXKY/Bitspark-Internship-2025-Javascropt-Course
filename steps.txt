@@ -16,3 +16,6 @@
  -> reseting marks
 //Custom alerts
  -> set time out
+//Calculating GPA
+ -> Modifying the course class
+ -> calling the function in the calculate GPA button event listener

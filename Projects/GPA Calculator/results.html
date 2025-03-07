@@ -26,7 +26,7 @@
           <p class="logo-text results-logo-text">GPA Calculator</p>
         </div>
 
-        <button class="print-results-btn">
+        <button class="print-results-btn js-print-marks-btn">
           <p class="print-btn-text">Print Results</p>
           <img
             src="./images-and-icons/printer.png"
@@ -36,38 +36,17 @@
         </button>
       </div>
 
-      <div class="marks-table section-padding">
+      <div class="marks-table section-padding js-results-page">
         <div class="marks-table-header">
           <p>Course</p>
           <p>Grade</p>
           <p>GPA</p>
         </div>
 
-        <div class="mark-tables-entries">
-          <div class="marks-table-entry">
-            <p>Object Modeling</p>
-            <p>A</p>
-            <p>4.0</p>
-          </div>
-          <div class="marks-table-entry">
-            <p>Object Modeling</p>
-            <p>A</p>
-            <p>4.0</p>
-          </div>
-          <div class="marks-table-entry">
-            <p>Object Modeling</p>
-            <p>A</p>
-            <p>4.0</p>
-          </div>
-          <div class="marks-table-entry">
-            <p>Object Modeling</p>
-            <p>A</p>
-            <p>4.0</p>
-          </div>
-        </div>
+        <div class="mark-tables-entries js-marks-tables-result"></div>
 
         <div class="marks-table-footer">
-          <p><span>Final GPA: </span> 3.28</p>
+          <p>Final GPA: <span class="js-finally-gpa"></span></p>
         </div>
       </div>
 
@@ -77,10 +56,14 @@
           <div class="results-summary-content">
             <p>
               Grades:
-              <span>A = 0, B+=0, B=15, C+ = 0, C= 0, D+ =0, D=0, F=0</span>
+              <span class="js-summary-grades"
+                >A = 0, B+=0, B=15, C+ = 0, C= 0, D+ =0, D=0, F=0</span
+              >
             </p>
 
-            <p class="gpa-sumary">GPA: <span>3.0</span></p>
+            <p class="gpa-sumary">
+              GPA: <span class="js-summary-gpa">3.0</span>
+            </p>
           </div>
         </div>
 
@@ -128,7 +111,7 @@
               <div class="marks-table-entry">
                 <p>40-44</p>
                 <p>D</p>
-                <p>1.1</p>
+                <p>1.0</p>
               </div>
               <div class="marks-table-entry">
                 <p>0-39</p>
@@ -137,12 +120,12 @@
               </div>
             </div>
 
-            <div class="marks-table-footer">
-              <p><span>Final GPA: </span> 3.28</p>
-            </div>
+            <div class="marks-table-footer criteria-footer"></div>
           </div>
         </div>
       </div>
     </div>
+
+    <script src="./scripts/rendering/marks.js" type="module"></script>
   </body>
 </html>

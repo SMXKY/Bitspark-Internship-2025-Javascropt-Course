@@ -52,6 +52,10 @@
   margin-top: 1rem;
 }
 
+.criteria-footer {
+  height: 1.5rem;
+}
+
 @media (max-width: 800px) {
   .marks-table-header p {
     font-size: 1rem;
@@ -95,6 +99,11 @@
 
   .summary-table-header p {
     font-size: 0.9rem;
+  }
+
+  .marks-table-header p {
+    font-size: 0.9rem;
+    font-weight: 500;
   }
 }
 
